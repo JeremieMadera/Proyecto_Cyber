@@ -1,0 +1,38 @@
+{"fecha": "2026-11-11T19:39:15.636287+00:00", "usuario": "user", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T19:41:11.027551+00:00", "usuario": "user", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T19:50:11.869119+00:00", "usuario": "admin", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T19:50:11.871118+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:50:11.879118+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:50:11.881119+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:50:11.883119+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:50:11.887121+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:50:11.890119+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:50:11.892118+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 0}}
+{"fecha": "2026-11-11T19:50:11.901122+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 0, "nueva": 10}}
+{"fecha": "2026-11-11T19:50:11.903121+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 1000}}
+{"fecha": "2026-11-11T19:50:11.912118+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 1000, "nueva": 10}}
+{"fecha": "2026-11-11T19:54:56.923068+00:00", "usuario": "admin", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T19:54:56.925062+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:54:56.927062+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:54:56.930063+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:54:56.932068+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:54:56.934070+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:54:56.937068+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 10}}
+{"fecha": "2026-11-11T19:54:56.940068+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 0}}
+{"fecha": "2026-11-11T19:54:56.942068+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 0, "nueva": 10}}
+{"fecha": "2026-11-11T19:54:56.945071+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 1000}}
+{"fecha": "2026-11-11T19:54:56.948117+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 1000, "nueva": 10}}
+{"fecha": "2026-11-11T20:24:44.260807+00:00", "usuario": "admin", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T20:24:44.288808+00:00", "usuario": "user", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T20:24:44.291805+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 10, "nueva": 20}}
+{"fecha": "2026-11-11T20:27:28.292648+00:00", "usuario": "admin", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T20:27:50.923736+00:00", "usuario": "admin", "accion": "modificar", "resultado": "exitoso", "detalles": {"producto": "P001", "anterior": 20, "nueva": 20}}
+{"fecha": "2026-11-11T20:31:00.554361+00:00", "usuario": "admin", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T20:37:36.927298+00:00", "usuario": "admin\\", "accion": "login", "resultado": "fallido", "detalles": {}}
+{"fecha": "2026-11-11T20:38:51.239931+00:00", "usuario": "admin", "accion": "login", "resultado": "fallido", "detalles": {}}
+{"fecha": "2026-11-11T20:39:20.171291+00:00", "usuario": "user", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T20:42:15.810210+00:00", "usuario": "user", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T20:45:44.999636+00:00", "usuario": "user", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T20:48:44.424275+00:00", "usuario": "user", "accion": "login", "resultado": "exitoso", "detalles": {}}
+{"fecha": "2026-11-11T20:48:55.143660+00:00", "usuario": "user", "accion": "modificar", "resultado": "rechazado", "detalles": {"producto": "P001", "motivo": "sin permisos"}}
+{"fecha": "2026-11-11T21:11:07.796957+00:00", "usuario": "admin", "accion": "login", "resultado": "exitoso", "detalles": {}}

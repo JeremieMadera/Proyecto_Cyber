@@ -1,4 +1,12 @@
 [
-  {"usuario": "admin", "rol": "admin", "clave": "AdminDemo2700!"},
-  {"usuario": "user", "rol": "user", "clave": "UserDemo2700!"}
+  {
+    "usuario": "admin",
+    "rol": "admin",
+    "hash": "$argon2id$v=19$m=19456,t=2,p=1$5Aq6dEBZ4uqauVwTWd/PHA$Eh1jcWQ4sv53JVvHegXkYJAxUtgiiZskxOzlF+/4ZLg"
+  },
+  {
+    "usuario": "user",
+    "rol": "user",
+    "hash": "$argon2id$v=19$m=19456,t=2,p=1$ntYHe1lW8Yub5+Buqp1Czg$Pme3EzuHx2ifBKwpPpU9jL5rZp0S+6f1w/lij/fISts"
+  }
 ]

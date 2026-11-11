@@ -1,5 +1,7 @@
 # Base educativa — COMP 2700
 
+**Nombre:** Jeremie Madera Otero
+
 Esta versión contiene debilidades intencionales. Utilice únicamente los datos
 ficticios incluidos, en su computadora. No es una aplicación de producción.
 

@@ -1,6 +1,8 @@
 """BASE EDUCATIVA INSEGURA. Corregir los TODO antes de la entrega."""
 import json
+from datetime import datetime, timezone
 from pathlib import Path
+from seguridad import verificar_clave
 
 RAIZ = Path(__file__).resolve().parent
 DATOS = RAIZ / "inventario.json"
@@ -9,8 +11,14 @@ LOG = RAIZ / "auditoria.jsonl"
 
 
 def cargar_inventario():
-    # TODO: controlar archivo ausente y JSON inválido. No sobrescribirlos.
-    return json.loads(DATOS.read_text(encoding="utf-8"))
+    try:
+        return json.loads(DATOS.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        print("No se encontró el archivo de inventario.")
+        return []
+    except json.JSONDecodeError:
+        print("El archivo de inventario no contiene JSON válido.")
+        return []
 
 
 def guardar_inventario(productos):
@@ -18,47 +26,89 @@ def guardar_inventario(productos):
 
 
 def registrar_evento(usuario, accion, resultado, **detalles):
-    # TODO: guardar un objeto JSON por línea; fecha/hora, usuario, acción,
-    # resultado y detalles no sensibles. Nunca guardar contraseña ni hash.
-    pass
+    evento = {
+        "fecha": datetime.now(timezone.utc).isoformat(),
+        "usuario": usuario,
+        "accion": accion,
+        "resultado": resultado,
+        "detalles": detalles,
+    }
+    with LOG.open("a", encoding="utf-8") as archivo:
+        archivo.write(json.dumps(evento, ensure_ascii=True) + "\n")
 
 
 def autenticar(nombre, clave):
     usuarios = json.loads(USUARIOS.read_text(encoding="utf-8"))
-    # TODO: integrar seguridad.py y migrar usuarios.json sin claves legibles.
+    
     for usuario in usuarios:
-        if usuario["usuario"] == nombre and usuario["clave"] == clave:
+        if usuario["usuario"] == nombre and verificar_clave(usuario["hash"], clave):
             registrar_evento(nombre, "login", "exitoso")
             return {"usuario": nombre, "rol": usuario["rol"]}
-    # TODO: registrar también el intento fallido.
+    
+    registrar_evento(nombre, "login", "fallido")
     print("Credenciales incorrectas.")
     return None
 
 
 def consultar_inventario(sesion):
-    # TODO: rechazar si no existe sesión válida.
+    if sesion is None:
+        print("Acceso rechazado.")
+        return False
+
     productos = cargar_inventario()
     for producto in productos:
         print(producto["id"], producto["nombre"], producto["cantidad"])
+    return True
 
 
 def modificar_cantidad(sesion, identificador, entrada):
-    # TODO: verificar sesión y rol AQUÍ, antes de modificar.
-    # TODO: validar entero entre 0 y 1000, sin interrumpir el programa.
-    cantidad = int(entrada)
+    if sesion is None or sesion.get("rol") != "admin":
+        registrar_evento(
+            sesion["usuario"] if sesion else "anonimo",
+            "modificar",
+            "rechazado",
+            producto=identificador,
+            motivo="sin permisos"
+        )
+        print("Acceso rechazado.")
+        return False
+
+    try:
+        cantidad = int(entrada)
+    except (TypeError, ValueError):
+        print("La cantidad debe ser un número entero.")
+        return False
+
+    if cantidad < 0 or cantidad > 1000:
+        print("La cantidad debe estar entre 0 y 1000.")
+        return False
+
     productos = cargar_inventario()
+
     for producto in productos:
         if producto["id"] == identificador:
             anterior = producto["cantidad"]
             producto["cantidad"] = cantidad
             guardar_inventario(productos)
             registrar_evento(
-                sesion["usuario"], "modificar", "exitoso",
-                producto=identificador, anterior=anterior, nueva=cantidad
+                sesion["usuario"],
+                "modificar",
+                "exitoso",
+                producto=identificador,
+                anterior=anterior,
+                nueva=cantidad
             )
             print("Cantidad actualizada.")
             return True
-    # TODO: informar identificador inexistente, sin crear productos.
+
+    registrar_evento(
+        sesion["usuario"],
+        "modificar",
+        "rechazado",
+        producto=identificador,
+        motivo="producto inexistente"
+    )
+    print("Producto inexistente.")
     return False
 
 
